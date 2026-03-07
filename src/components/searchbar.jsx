@@ -23,7 +23,6 @@ export default function Search() {
         })
 
   return (
-    // Kita hapus h-screen dan pt-20 agar ukurannya pas di Navbar
     <div className="w-64"> 
       <Combobox value={selected} onChange={(value) => setSelected(value)} onClose={() => setQuery('')}>
         <div className="relative">
@@ -48,7 +47,7 @@ export default function Search() {
           anchor="bottom start" // Mengunci posisi dropdown tepat di bawah input
           transition
           className={clsx(
-            'w-[var(--input-width)] rounded-xl border border-white/5 bg-gray-900 p-1 [--anchor-gap:4px] empty:invisible',
+            'w-[var(--input-width)] rounded-xl border border-white/5 bg-gray-600/20 p-1 [--anchor-gap:4px] empty:invisible',
             'transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0 z-50'
           )}
         >
