@@ -1,11 +1,11 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { NavLink } from 'react-router-dom' // Import NavLink
+import { NavLink, Link } from 'react-router-dom' // Import NavLink
 import logo from '../assets/logo.png'
 import Search from './searchbar'
 
 const navigation = [
-  { name: 'Movie', href: '/' },
+  { name: 'Movie', href: '/movie' },
   { name: 'Film / Drama', href: '/drama' },
   { name: 'Anime', href: '/anime'},
 ]
@@ -30,7 +30,13 @@ export default function Navbar() {
 
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <img alt="logo" src={logo} className="h-8 w-auto" />
+              <Link to="/">
+                <img
+                  alt="logo picture"
+                  src={logo}
+                  className="h-8 w-auto cursor-pointer" // Added cursor-pointer for better UX
+                />
+              </Link>
             </div>
             
             {/* Desktop Navigation */}

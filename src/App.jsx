@@ -1,6 +1,8 @@
 import './App.css'
 import Navbar from './components/navbar'
+import Homepage from './pages/home'
 import Animepage from './pages/animepage'
+import Moviepage from './pages/movie'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -11,7 +13,8 @@ function App() {
       
       <Routes>
         {/* 'path' stays simple, basename handles the prefix */}
-        <Route path="/" element={<div>Movie Home Page</div>} />
+        <Route path="/" element={<Homepage />} />
+        <Route path='/movie' element={<Moviepage />} />
         <Route path="/drama" element={<div>Drama Page</div>} />
         <Route path="/anime" element={<Animepage />} />
       </Routes>
